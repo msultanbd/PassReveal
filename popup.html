@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PassReveal</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div class="brand">
+        <img src="icons/icon48.png" alt="" class="logo">
+        <div>
+          <h1>PassReveal</h1>
+          <p>Password visibility assistant</p>
+        </div>
+      </div>
+      <label class="switch" title="Enable PassReveal">
+        <input id="enabled" type="checkbox">
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <section class="hero">
+      <div class="status-dot"></div>
+      <div>
+        <strong id="statusText">PassReveal is active</strong>
+        <span>Click a password field to reveal it.</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-title">Behavior</div>
+
+      <label class="row">
+        <div>
+          <strong>Reveal on focus</strong>
+          <span>Show the password when the field is clicked.</span>
+        </div>
+        <input id="revealOnFocus" class="check" type="checkbox">
+      </label>
+
+      <label class="row">
+        <div>
+          <strong>Hide when leaving field</strong>
+          <span>Automatically hide it when focus moves away.</span>
+        </div>
+        <input id="hideOnBlur" class="check" type="checkbox">
+      </label>
+
+      <label class="row">
+        <div>
+          <strong>Hide when switching tabs</strong>
+          <span>Reduce accidental exposure when the tab changes.</span>
+        </div>
+        <input id="hideOnTabSwitch" class="check" type="checkbox">
+      </label>
+    </section>
+
+    <footer>
+      <span>Private by design · No passwords stored</span>
+      <span>v1.0.0</span>
+    </footer>
+  </main>
+<script src="popup.js"></script>
+</body>
+</html>
